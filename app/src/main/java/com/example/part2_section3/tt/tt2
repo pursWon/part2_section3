@@ -1,0 +1,16 @@
+package com.example.part2_section3.tt
+
+fun main() {
+    val a: Int = 128
+    val b = a
+
+    val c: Int? = a
+    val d: Int? = a
+    val e: Int? = c
+
+    println(c == d ) // true, 값이 같다
+    println(c === d) // false, 참조 주소가 다르다
+    println(c === e) // true, 참조 주소와 값을 a에게서 받았으므로 같다
+}
+
+// 코틀린에서는 참조형으로 선언한 변수의 값이 128~127 범위에 있으면 캐시에 그 값을 저장한다
